@@ -1,0 +1,18 @@
+GET http://localhost:3000 HTTP/1.1
+
+###
+GET https://cse341-80ip.onrender.com HTTP/1.1
+
+
+// LOCALHOST w02 testing
+### 
+GET http://localhost:3000/contacts
+
+### 
+GET http://localhost:3000/contacts/681397bc4fd361d08dfbb7a1 
+
+### 
+GET http://localhost:3000/contacts/681398294fd361d08dfbb7a2 
+
+### 
+GET http://localhost:3000/contacts/6813984c4fd361d08dfbb7a3
