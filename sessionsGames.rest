@@ -84,10 +84,10 @@ content-type: application/json
 
 
 ### DELETE Session
-DELETE http://localhost:3000/sessions/681cf4ea21bdcea3b430b66a HTTP/1.1
+DELETE http://localhost:3000/sessions/682fdb64776b03d3f5e10fa9 HTTP/1.1
 
 ### DELETE Game
-DELETE http://localhost:3000/games/681cf4ea21bdcea3b430b66a HTTP/1.1
+DELETE http://localhost:3000/games/682fda6c79e7bc4bb8da470a HTTP/1.1
 
 
 
@@ -100,10 +100,10 @@ GET https://cse-341-project-2-2548.onrender.com/games
 
 
 ### Get session by id
-GET https://cse-341-project-2-2548.onrender.com/sessions/681398294fd361d08dfbb7a2 
+GET https://cse-341-project-2-2548.onrender.com/sessions/682fa967698ba839ac821ca4
 
 ### Get games by id
-GET https://cse-341-project-2-2548.onrender.com/games/681398294fd361d08dfbb7a2 
+GET https://cse-341-project-2-2548.onrender.com/games/682e9bdf4dd7fa13e4f39b2f 
 
 
 ### Create/POST session
@@ -112,7 +112,7 @@ content-type: application/json
 
 {
     "userId": "player2",
-    "gameId": "682fda6c79e7bc4bb8da470a",
+    "gameId": "682fe2a24e9ffbe0bc7879a6",
     "date": "11/21/2025",
     "startTime": "8:00pm",
     "duration": "3 hours",
@@ -124,7 +124,7 @@ content-type: application/json
 }
 
 ### Create/POST game
-POST https://cse-341-project-2-2548.onrender.com/games HTTP/1.1
+POST https://cse-341-project-2-2548.onrender.com/games/ HTTP/1.1
 content-type: application/json
 
 {
@@ -136,13 +136,13 @@ content-type: application/json
 }
 
 
-### PUT contact
-PUT https://cse-341-project-2-2548.onrender.com/sessions/6826b302d1e6e54c5d9e4ab6 HTTP/1.1
+### PUT session
+PUT https://cse-341-project-2-2548.onrender.com/sessions/682fe2da4e9ffbe0bc7879a7 HTTP/1.1
 content-type: application/json
 
 {
     "userId": "player2",
-    "gameId": "682fda6c79e7bc4bb8da470a",
+    "gameId": "682fe2a24e9ffbe0bc7879a6",
     "date": "11/21/2025",
     "startTime": "4:00pm",
     "duration": "6 hours",
@@ -154,7 +154,7 @@ content-type: application/json
 }
 
 ### PUT game
-PUT https://cse-341-project-2-2548.onrender.com/games/6826b302d1e6e54c5d9e4ab6 HTTP/1.1
+PUT https://cse-341-project-2-2548.onrender.com/games/682fe2a24e9ffbe0bc7879a6 HTTP/1.1
 content-type: application/json
 
 {
@@ -167,7 +167,7 @@ content-type: application/json
 
 
 ### DELETE Session
-DELETE https://cse-341-project-2-2548.onrender.com/sessions/6826b302d1e6e54c5d9e4ab6 HTTP/1.1
+DELETE https://cse-341-project-2-2548.onrender.com/sessions/682fe2da4e9ffbe0bc7879a7 HTTP/1.1
 
 ### DELETE Game
-DELETE https://cse-341-project-2-2548.onrender.com/games/6826b302d1e6e54c5d9e4ab6 HTTP/1.1
+DELETE https://cse-341-project-2-2548.onrender.com/games/682fe2a24e9ffbe0bc7879a6 HTTP/1.1
