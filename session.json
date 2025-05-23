@@ -1,0 +1,38 @@
+{
+  "session": {
+    "userId": "player1",
+    "gameId": "682e9bdf4dd7fa13e4f39b2f",
+    "date": "07/09/2025",
+    "startTime": "7:00pm",
+    "duration": "2 hours",
+    "players": ["Billy, Will, Adam, Matt"],
+    "mode": "Co-op",
+    "platform": "Steam",
+    "notes": "Billy cheats",
+    "status": "Planned"
+  },
+  "session2": {
+    "userId": "player3",
+    "gameId": "682fa88c698ba839ac821ca2",
+    "date": "04/19/2025",
+    "startTime": "10:00pm",
+    "duration": "3 hours",
+    "players": ["Will, Adam"],
+    "mode": "PvP",
+    "platform": "Epic",
+    "notes": "We all died and need more practice",
+    "status": "Completed"
+  },
+  "session3": {
+    "userId": "playe3",
+    "gameId": "682fa8b6698ba839ac821ca3",
+    "date": "08/11/2025",
+    "startTime": "5:00pm",
+    "duration": "4 hours",
+    "players": ["Matt, Adam"],
+    "mode": "Casual",
+    "platform": "Steam",
+    "notes": "Need to build bigger base",
+    "status": "Canceled"
+  }
+}

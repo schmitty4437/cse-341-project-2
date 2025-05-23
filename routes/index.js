@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
-//const nameController = require('../controllers');
-
-//router.get('/', nameController.getName);
 
 router.use('/', require('./swagger'));
-router.use('/contacts', require('./contacts'));
+router.use('/sessions', require('./sessions'));
+router.use('/games', require('./games'));
 
 module.exports = router;

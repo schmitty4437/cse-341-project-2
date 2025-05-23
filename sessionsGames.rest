@@ -1,0 +1,173 @@
+// LOCALHOST
+// GET all sessions and games
+### 
+GET http://localhost:3000/sessions HTTP/1.1
+###
+GET http://localhost:3000/games HTTP/1.1
+
+//GET session and game by id
+### 
+GET http://localhost:3000/sessions/682fa967698ba839ac821ca4 HTTP/1.1
+### 
+GET http://localhost:3000/sessions/682fa9b6698ba839ac821ca5 HTTP/1.1
+### 
+GET http://localhost:3000/sessions/682fa9c0698ba839ac821ca6 HTTP/1.1
+
+### 
+GET http://localhost:3000/games/682e9bdf4dd7fa13e4f39b2f HTTP/1.1
+### 
+GET http://localhost:3000/games/682fa88c698ba839ac821ca2 HTTP/1.1
+### 
+GET http://localhost:3000/games/682fa8b6698ba839ac821ca3 HTTP/1.1
+
+
+// LOCAL POST
+### Create/POST Game
+POST http://localhost:3000/games HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Terraria",
+    "platform": "Steam",
+    "genre": "Open World",
+    "multiplayer": "Yes",
+    "developer": "Logic"
+}
+
+### Create/POST Session
+POST http://localhost:3000/sessions HTTP/1.1
+content-type: application/json
+
+{
+    "userId": "player2",
+    "gameId": "682fda6c79e7bc4bb8da470a",
+    "date": "11/21/2025",
+    "startTime": "8:00pm",
+    "duration": "3 hours",
+    "players": ["Matt, Billy"],
+    "mode": "Survival",
+    "platform": "Steam",
+    "notes": "Continue hunting for supplies",
+    "status": "Planned"
+}
+
+
+
+### PUT Session
+PUT http://localhost:3000/sessions/68268f88423b889d6d6a2269 HTTP/1.1
+content-type: application/json
+
+{
+    "userId": "player2",
+    "gameId": "682fda6c79e7bc4bb8da470a",
+    "date": "11/21/2025",
+    "startTime": "4:00pm",
+    "duration": "6 hours",
+    "players": ["Matt, Billy"],
+    "mode": "Survival",
+    "platform": "Steam",
+    "notes": "Continue hunting for supplies",
+    "status": "Pending"
+}
+
+### PUT Game
+PUT http://localhost:3000/games/68268f88423b889d6d6a2269 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Terraria",
+    "platform": "Steam",
+    "genre": "Sandbox",
+    "multiplayer": "Yes",
+    "developer": "Re-Logic"
+}
+
+
+### DELETE Session
+DELETE http://localhost:3000/sessions/681cf4ea21bdcea3b430b66a HTTP/1.1
+
+### DELETE Game
+DELETE http://localhost:3000/games/681cf4ea21bdcea3b430b66a HTTP/1.1
+
+
+
+// PRODUCTION DEPLOY
+### Get all sessions
+GET https://cse-341-project-2-2548.onrender.com/sessions
+
+### Get all games
+GET https://cse-341-project-2-2548.onrender.com/games
+
+
+### Get session by id
+GET https://cse-341-project-2-2548.onrender.com/sessions/681398294fd361d08dfbb7a2 
+
+### Get games by id
+GET https://cse-341-project-2-2548.onrender.com/games/681398294fd361d08dfbb7a2 
+
+
+### Create/POST session
+POST https://cse-341-project-2-2548.onrender.com/sessions HTTP/1.1
+content-type: application/json
+
+{
+    "userId": "player2",
+    "gameId": "682fda6c79e7bc4bb8da470a",
+    "date": "11/21/2025",
+    "startTime": "8:00pm",
+    "duration": "3 hours",
+    "players": ["Matt, Billy"],
+    "mode": "Survival",
+    "platform": "Steam",
+    "notes": "Continue hunting for supplies",
+    "status": "Planned"
+}
+
+### Create/POST game
+POST https://cse-341-project-2-2548.onrender.com/games HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Terraria",
+    "platform": "Steam",
+    "genre": "Open World",
+    "multiplayer": "Yes",
+    "developer": "Logic"
+}
+
+
+### PUT contact
+PUT https://cse-341-project-2-2548.onrender.com/sessions/6826b302d1e6e54c5d9e4ab6 HTTP/1.1
+content-type: application/json
+
+{
+    "userId": "player2",
+    "gameId": "682fda6c79e7bc4bb8da470a",
+    "date": "11/21/2025",
+    "startTime": "4:00pm",
+    "duration": "6 hours",
+    "players": ["Matt, Billy"],
+    "mode": "Survival",
+    "platform": "Steam",
+    "notes": "Continue hunting for supplies",
+    "status": "Pending"
+}
+
+### PUT game
+PUT https://cse-341-project-2-2548.onrender.com/games/6826b302d1e6e54c5d9e4ab6 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Terraria",
+    "platform": "Steam",
+    "genre": "Sandbox",
+    "multiplayer": "Yes",
+    "developer": "Re-Logic"
+}
+
+
+### DELETE Session
+DELETE https://cse-341-project-2-2548.onrender.com/sessions/6826b302d1e6e54c5d9e4ab6 HTTP/1.1
+
+### DELETE Game
+DELETE https://cse-341-project-2-2548.onrender.com/games/6826b302d1e6e54c5d9e4ab6 HTTP/1.1

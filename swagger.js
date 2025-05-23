@@ -2,15 +2,15 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'My API',
-    description: 'Description'
+    title: 'Gaming Session Planner',
+    description: 'Plan video gaming sessions'
   },
-  host: 'cse341-80ip.onrender.com',
+  host: 'cse-341-project-2-2548.onrender.com',
   schemes: ['https']
 };
 
 const outputFile = './swagger.json';
-const routes = ['./routes/index.js'];
+const routes = ['./routes/index.js', './routes/sessions.js', './routes/games.js'];
 
 /* NOTE: If you are using the express Router, you must pass in the 'routes' only the 
 root file where the route starts, such as index.js, app.js, routes.js, etc ... */

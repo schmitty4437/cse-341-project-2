@@ -1,0 +1,23 @@
+{
+  "game": {
+    "title": "Project Zomboid",
+    "platform": "Steam",
+    "genre": "Survival",
+    "multiplayer": "Yes",
+    "developer": "The Indie Stone"
+  },
+  "game2": {
+    "title": "Apex Legends",
+    "platform": "Epic",
+    "genre": "Adventure",
+    "multiplayer": "Yes",
+    "developer": "Respawn"
+  },
+  "game3": {
+    "title": "Forever Skies",
+    "platform": "Steam",
+    "genre": "Open World",
+    "multiplayer": "Yes",
+    "developer": "Far From Home"
+  }
+}
