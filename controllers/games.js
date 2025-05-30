@@ -5,9 +5,13 @@ const { ObjectId } = require('mongodb');
  Function to get all games
 ******************************/
 const getAllGames = async (req, res) => {
-  // Query the games collection in gameSessionDB and convert results to an array
-  const game = await client.db('gameSessionDB').collection('games').find().toArray();
-  res.json({ game });
+  try {
+    // Query the games collection in gameSessionDB and convert results to an array
+    const game = await client.db('gameSessionDB').collection('games').find().toArray();
+    res.json({ game });
+  } catch {
+    res.status(500).json({ error: 'Server Error' });
+  }
 };
 
 /***************************** 
@@ -36,17 +40,17 @@ const getGameById = async (req, res) => {
  Week 3 - POST/create game function
 ******************************/
 const createGame = async (req, res) => {
-  if (
-    !req.body.title ||
-    !req.body.platform ||
-    !req.body.genre ||
-    !req.body.multiplayer ||
-    !req.body.developer
-  ) {
-    return res.status(400).json({
-      error: 'All fields are required: (title, platform, genre, multiplayer, developer)'
-    });
-  }
+  // if (
+  //   !req.body.title ||
+  //   !req.body.platform ||
+  //   !req.body.genre ||
+  //   !req.body.multiplayer ||
+  //   !req.body.developer
+  // ) {
+  //   return res.status(400).json({
+  //     error: 'All fields are required: (title, platform, genre, multiplayer, developer)'
+  //   });
+  // }
 
   // Creating newGame object
   const newGame = {
@@ -70,17 +74,17 @@ const createGame = async (req, res) => {
  Week 3 - PUT-update game function
 ******************************/
 const updateGame = async (req, res) => {
-  if (
-    !req.body.title ||
-    !req.body.platform ||
-    !req.body.genre ||
-    !req.body.multiplayer ||
-    !req.body.developer
-  ) {
-    return res.status(400).json({
-      error: 'All fields are required: (title, platform, genre, multiplayer, developer)'
-    });
-  }
+  // if (
+  //   !req.body.title ||
+  //   !req.body.platform ||
+  //   !req.body.genre ||
+  //   !req.body.multiplayer ||
+  //   !req.body.developer
+  // ) {
+  //   return res.status(400).json({
+  //     error: 'All fields are required: (title, platform, genre, multiplayer, developer)'
+  //   });
+  // }
 
   //Gets the id from URL
   const userId = req.params.id;

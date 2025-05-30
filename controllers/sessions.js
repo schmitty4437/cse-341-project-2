@@ -36,23 +36,23 @@ const getSessionById = async (req, res) => {
  Week 3 - POST/create session function
 ******************************/
 const createSession = async (req, res) => {
-  if (
-    !req.body.userId ||
-    !req.body.gameId ||
-    !req.body.date ||
-    !req.body.startTime ||
-    !req.body.duration ||
-    !req.body.players ||
-    !req.body.mode ||
-    !req.body.platform ||
-    !req.body.notes ||
-    !req.body.status
-  ) {
-    return res.status(400).json({
-      error:
-        'All fields are required: (userId, gameId, date, startTime, duration, players, mode, platform, notes)'
-    });
-  }
+  // if (
+  //   !req.body.userId ||
+  //   !req.body.gameId ||
+  //   !req.body.date ||
+  //   !req.body.startTime ||
+  //   !req.body.duration ||
+  //   !req.body.players ||
+  //   !req.body.mode ||
+  //   !req.body.platform ||
+  //   !req.body.notes ||
+  //   !req.body.status
+  // ) {
+  //   return res.status(400).json({
+  //     error:
+  //       'All fields are required: (userId, gameId, date, startTime, duration, players, mode, platform, notes)'
+  //   });
+  // }
 
   // Creating newSession object
   const newSession = {
@@ -81,23 +81,23 @@ const createSession = async (req, res) => {
  Week 3 - PUT-update session function
 ******************************/
 const updateSession = async (req, res) => {
-  if (
-    !req.body.userId ||
-    !req.body.gameId ||
-    !req.body.date ||
-    !req.body.startTime ||
-    !req.body.duration ||
-    !req.body.players ||
-    !req.body.mode ||
-    !req.body.platform ||
-    !req.body.notes ||
-    !req.body.status
-  ) {
-    return res.status(400).json({
-      error:
-        'All fields are required: (userId, gameId, date, startTime, duration, players, mode, platform, notes, status)'
-    });
-  }
+  // if (
+  //   !req.body.userId ||
+  //   !req.body.gameId ||
+  //   !req.body.date ||
+  //   !req.body.startTime ||
+  //   !req.body.duration ||
+  //   !req.body.players ||
+  //   !req.body.mode ||
+  //   !req.body.platform ||
+  //   !req.body.notes ||
+  //   !req.body.status
+  // ) {
+  //   return res.status(400).json({
+  //     error:
+  //       'All fields are required: (userId, gameId, date, startTime, duration, players, mode, platform, notes, status)'
+  //   });
+  // }
 
   //Gets the id from URL
   const userId = req.params.id;

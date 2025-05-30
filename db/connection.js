@@ -2,6 +2,7 @@ const { MongoClient } = require('mongodb');
 
 //get variable from .env file
 const uri = process.env.MONGODB_URI;
+// Found how to include retry limits
 const client = new MongoClient(uri);
 
 // store db connection

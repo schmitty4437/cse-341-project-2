@@ -25,9 +25,20 @@ app.use('/', nameRouter);
 app.use('/sessions', sessionsRouter);
 app.use('/games', gamesRouter);
 
-// server starts when db is connected
-connectDb().then(() => {
-  app.listen(port, () => {
-    console.log(`Web Server is running on port ${port}`);
-  });
+// Global error
+app.use((err, req, res) => {
+  console.error('Unhandled error:', err);
+  res.status(500).json({ error: 'Internal server error' });
 });
+
+// server starts when db is connected
+connectDb()
+  .then(() => {
+    app.listen(port, () => {
+      console.log(`Web Server is running on port ${port}`);
+    });
+  })
+  .catch((error) => {
+    console.error('Failed to connect to database:', error);
+    process.exit(1);
+  });

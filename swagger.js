@@ -5,8 +5,10 @@ const doc = {
     title: 'Gaming Session Planner',
     description: 'Plan video gaming sessions'
   },
-  host: 'cse-341-project-2-2548.onrender.com',
-  schemes: ['https']
+  // host: 'cse-341-project-2-2548.onrender.com',
+  // schemes: ['https']
+  host: 'localhost:3000',
+  schemes: ['http']
 };
 
 const outputFile = './swagger.json';

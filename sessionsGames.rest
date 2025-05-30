@@ -44,11 +44,11 @@ content-type: application/json
     "date": "11/21/2025",
     "startTime": "8:00pm",
     "duration": "3 hours",
-    "players": ["Matt, Billy"],
+    "players": ["Matt", "Billy"],
     "mode": "Survival",
     "platform": "Steam",
     "notes": "Continue hunting for supplies",
-    "status": "Planned"
+    "status": "planned"
 }
 
 
@@ -63,11 +63,11 @@ content-type: application/json
     "date": "11/21/2025",
     "startTime": "4:00pm",
     "duration": "6 hours",
-    "players": ["Matt, Billy"],
+    "players": ["Matt", "Billy"],
     "mode": "Survival",
     "platform": "Steam",
     "notes": "Continue hunting for supplies",
-    "status": "Pending"
+    "status": "cancelled"
 }
 
 ### PUT Game
@@ -112,7 +112,7 @@ content-type: application/json
 
 {
     "userId": "player2",
-    "gameId": "682fe2a24e9ffbe0bc7879a6",
+    "gameId": "682fe6360da8fc4f6ed246bb",
     "date": "11/21/2025",
     "startTime": "8:00pm",
     "duration": "3 hours",
