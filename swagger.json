@@ -5,10 +5,10 @@
     "description": "Plan video gaming sessions",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse-341-project-2-2548.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {
@@ -199,6 +199,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -341,6 +344,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
