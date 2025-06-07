@@ -6,6 +6,8 @@ const { connectDb } = require('./db/connection');
 const nameRouter = require('./routes/index');
 const sessionsRouter = require('./routes/sessions');
 const gamesRouter = require('./routes/games');
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
 
 // Enable CORS. Allows requests from any origin. Allows resources on my server to be requested.
 //allow all origins, allow post/get, allow content-type
@@ -19,6 +21,12 @@ app.use((req, res, next) => {
 // This parse incoming json request bodies
 // Basically takes JSON data and converts it to a format our program can use
 app.use(express.json());
+
+// Passport for GitHub OAuth
+app.use(passport.initialize());
+
+// Use cookies for JWT
+app.use(cookieParser());
 
 app.use('/', nameRouter);
 // sends requests with /sessions and /games to routes/sessions or routes/games.js
