@@ -10,13 +10,13 @@ const verifyToken = (req, res, next) => {
 
   // Check if token exists
   if (!token) {
-    return res.status(401).json({ error: 'No token provided' });
+    return res.status(401).json({ error: 'You need to log in to do that' });
   }
 
   // Verify token
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
     if (err) {
-      return res.status(401).json({ error: 'Invalid token' });
+      return res.status(401).json({ error: 'Invalid log in' });
     }
     // Store user info in req
     req.user = decoded;
