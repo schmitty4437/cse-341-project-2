@@ -91,6 +91,35 @@ DELETE http://localhost:3000/games/682fda6c79e7bc4bb8da470a HTTP/1.1
 
 
 
+### User Authenticatoin
+POST http://localhost:3000/users HTTP/1.1 content-type: application/json
+
+{ 
+    "username": "testuser",
+    "email": "test@example.com",
+    "password": "secure123" 
+}
+
+
+
+POST http://localhost:3000/users/login HTTP/1.1 content-type: application/json
+
+{ 
+    "email": "test@example.com",
+    "password": "secure123" 
+}
+
+## search users by name
+GET http://localhost:3000/users HTTP/1.1
+
+
+###Start github login
+GET http://localhost:3000/users/github HTTP/1.1
+
+### Logout
+GET http://localhost:3000/users/logout HTTP/1.1 Cookie: jwt=
+
+
 // PRODUCTION DEPLOY
 ### Get all sessions
 GET https://cse-341-project-2-2548.onrender.com/sessions
@@ -171,3 +200,35 @@ DELETE https://cse-341-project-2-2548.onrender.com/sessions/682fe2da4e9ffbe0bc78
 
 ### DELETE Game
 DELETE https://cse-341-project-2-2548.onrender.com/games/682fe2a24e9ffbe0bc7879a6 HTTP/1.1
+
+
+
+
+### User authentication
+POST https://cse-341-project-2-2548.onrender.com/users HTTP/1.1 content-type: application/json
+
+{ 
+    "username": "produser", 
+    "email": "prod@example.com", 
+    "password": "secure123" 
+}
+
+
+
+POST https://cse-341-project-2-2548.onrender.com/users/login HTTP/1.1 content-type: application/json
+
+{ 
+    "email": "prod@example.com",
+    "password": "secure123" 
+}
+
+
+### search username
+GET https://cse-341-project-2-2548.onrender.com/users HTTP/1.1
+
+
+### Start github login
+GET https://cse-341-project-2-2548.onrender.com/users/github HTTP/1.1
+
+### Logout
+GET https://cse-341-project-2-2548.onrender.com/users/logout HTTP/1.1 Cookie: jwt=
